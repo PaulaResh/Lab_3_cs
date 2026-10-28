@@ -2,7 +2,6 @@
 
 namespace LabWork
 {
-    // Enum для выбора типа заполнения
     public enum MatrixFillType
     {
         Diagonal,
@@ -25,7 +24,6 @@ namespace LabWork
             FillFromKeyboard();
         }
 
-        // ОДИН конструктор с enum вместо двух с bool
         public Matrix(int n, MatrixFillType fillType)
         {
             _data = new double[n, n];
