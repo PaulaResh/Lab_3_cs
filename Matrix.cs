@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 
 namespace LabWork
 {
+    // Enum для выбора типа заполнения
     public enum MatrixFillType
     {
         Diagonal,
@@ -106,11 +107,12 @@ namespace LabWork
 
             Matrix result =
                 new Matrix(rowsA, colsB);
+            double sum = 0;
             for (int i = 0; i < rowsA; i++)
             {
                 for (int j = 0; j < colsB; j++)
                 {
-                    double sum = 0;
+                    sum = 0;
                     for (int k = 0; k < colsA; k++)
                     {
                         sum += a._data[i, k] *
@@ -189,13 +191,14 @@ namespace LabWork
             int cols = matrix.GetLength(1);
             double maxUnique = double.MinValue;
             bool found = false;
+            int count = 0;
 
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < cols; j++)
                 {
                     double current = matrix[i, j];
-                    int count = 0;
+                    count = 0;
 
                     for (int r = 0; r < rows; r++)
                     {
